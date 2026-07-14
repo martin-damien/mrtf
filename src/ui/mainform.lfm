@@ -1,0 +1,9 @@
+object ApplicationForm: TApplicationForm
+  Left = 334
+  Height = 240
+  Top = 250
+  Width = 320
+  Caption = 'ApplicationForm'
+  LCLVersion = '4.8.0.0'
+  OnCreate = FormCreate
+end
