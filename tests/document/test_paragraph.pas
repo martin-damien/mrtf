@@ -16,13 +16,13 @@ implementation
 
 procedure TTestParagraph.NewParagraphUsesNormalStyle;
 var
-    paragraph: TParagraph;
+    Paragraph: TParagraph;
 begin
-    paragraph := TParagraph.Create;
+    Paragraph := TParagraph.Create;
     try
-        AssertEquals('A paragraph must be psNormal by default.', Ord(psNormal), Ord(paragraph.Style));
+        AssertEquals('A paragraph must be psNormal by default.', Ord(psNormal), Ord(Paragraph.Style));
     finally
-        paragraph.Free;
+        Paragraph.Free;
     end;
 end;
 

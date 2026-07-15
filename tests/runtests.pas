@@ -4,7 +4,8 @@ program runtests;
 
 uses
     Classes, SysUtils, consoletestrunner,
-    test_paragraph;
+    test_paragraph,
+    test_fragment;
 
 type
     TMyTestRunner = class(TTestRunner)

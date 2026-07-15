@@ -16,7 +16,8 @@ type
     );
 
     TParagraph = class
-        FStyle: TParagraphStyle;
+        private
+            FStyle: TParagraphStyle;
 
         public
             constructor Create;
