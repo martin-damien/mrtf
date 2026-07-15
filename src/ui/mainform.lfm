@@ -4,6 +4,10 @@ object ApplicationForm: TApplicationForm
   Top = 250
   Width = 320
   Caption = 'ApplicationForm'
+  Color = clWhite
+  KeyPreview = True
   LCLVersion = '4.8.0.0'
   OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnPaint = FormPaint
 end
