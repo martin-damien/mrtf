@@ -5,7 +5,7 @@ unit mainform;
 interface
 
 uses
-    Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Document;
+    Classes, SysUtils, Forms, Controls, Graphics, Dialogs, MrtfDocument;
 
 type
 
@@ -36,7 +36,7 @@ begin
     doc.AddParagraph;
     doc.AddParagraph;
     try
-        ShowMessage('Document created with ' + IntToStr(doc.Paragraphs.Count) + ' paragraphs');
+        ShowMessage('Document created with ' + IntToStr(doc.ParagraphsCount) + ' paragraphs');
     finally
         doc.Free;
     end;

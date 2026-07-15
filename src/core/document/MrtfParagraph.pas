@@ -1,4 +1,4 @@
-unit paragraph;
+unit MrtfParagraph;
 
 {$mode ObjFPC}{$H+}
 
@@ -12,8 +12,7 @@ type
         psNormal,
         psHeading1,
         psHeading2,
-        psHeading3,
-        psBullet
+        psHeading3
     );
 
     TParagraph = class

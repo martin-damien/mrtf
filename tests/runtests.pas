@@ -1,5 +1,3 @@
-#!/usr/bin/env -S instantfpc -Fu../src/core/document
-
 program runtests;
 
 {$mode ObjFPC}{$H+}

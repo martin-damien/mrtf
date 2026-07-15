@@ -5,16 +5,16 @@ unit test_paragraph;
 interface
 
 uses
-    Classes, SysUtils, fpcunit, testutils, testregistry, paragraph;
+    Classes, SysUtils, fpcunit, testutils, testregistry, MrtfParagraph;
 
 type
     TTestParagraph = class(TTestCase)
-        procedure DefaultStyleIsNormal;
+        procedure NewParagraphUsesNormalStyle;
     end;
 
 implementation
 
-procedure TTestParagraph.DefaultStyleIsNormal;
+procedure TTestParagraph.NewParagraphUsesNormalStyle;
 var
     paragraph: TParagraph;
 begin
