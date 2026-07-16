@@ -4,6 +4,7 @@ program runtests;
 
 uses
     Classes, SysUtils, consoletestrunner,
+    test_document,
     test_paragraph,
     test_fragment;
 

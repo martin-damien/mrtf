@@ -5,7 +5,7 @@ unit mainform;
 interface
 
 uses
-    Classes, SysUtils, Forms, Controls, Graphics, Dialogs, MrtfDocument, LazUTF8;
+    Classes, SysUtils, Forms, Controls, Graphics, Dialogs, LazUTF8;
 
 type
 

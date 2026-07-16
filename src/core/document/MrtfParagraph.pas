@@ -5,7 +5,7 @@ unit MrtfParagraph;
 interface
 
 uses
-    Classes, SysUtils;
+    Classes, SysUtils, MrtfBlock;
 
 type
     TParagraphStyle = (
@@ -15,7 +15,7 @@ type
         psHeading3
     );
 
-    TParagraph = class
+    TParagraph = class(TBlock)
         private
             FStyle: TParagraphStyle;
 
@@ -29,6 +29,8 @@ implementation
 
 constructor TParagraph.Create;
 begin
+    inherited Create;
+
     FStyle := psNormal;
 end;
 

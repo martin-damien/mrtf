@@ -5,50 +5,54 @@ unit MrtfDocument;
 interface
 
 uses
-    Classes, Generics.Collections, Paragraph;
+    Classes, Generics.Collections, MrtfBlock;
 
 type
     TDocument = class
         private
-            FParagraphs: specialize TObjectList<TParagraph>;
-            FParagraphsCount: integer;
+            FBlocks: specialize TObjectList<TBlock>;
+
+            function GetBlocksCount: integer;
 
         public
             constructor Create;
             destructor Destroy; override;
 
-            function AddParagraph: TParagraph;
-            function Paragraphs(index: integer): TParagraph;
+            procedure AddBlock(ABlock: TBlock);
 
-            property ParagraphsCount: integer read FParagraphsCount;
+            function Blocks(index: integer): TBlock;
+
+            property BlocksCount: integer read GetBlocksCount;
     end;
 
 implementation
 
 constructor TDocument.Create;
 begin
-    FParagraphs := specialize TObjectList<TParagraph>.Create(True);
-    FParagraphsCount := 0;
+    FBlocks := specialize TObjectList<TBlock>.Create(True);
 end;
 
 destructor TDocument.Destroy;
 begin
-    FParagraphs.Free;
+    FBlocks.Free;
 
     inherited Destroy;
 end;
 
-function TDocument.AddParagraph: TParagraph;
+function TDocument.GetBlocksCount: integer;
 begin
-    Result := TParagraph.Create;
-    FParagraphs.Add(Result);
-    FParagraphsCount := FParagraphs.Count;
+    Result := FBlocks.Count;
 end;
 
-function TDocument.Paragraphs(index: integer): TParagraph;
+procedure TDocument.AddBlock(ABlock: TBlock);
+begin
+    FBlocks.Add(ABlock);
+end;
+
+function TDocument.Blocks(index: integer): TBlock;
 begin
     { @TODO Check if index is correct }
-    Result := FParagraphs[index];
+    Result := FBlocks[index];
 end;
 
 end.

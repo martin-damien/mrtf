@@ -9,7 +9,8 @@ uses
 
 type
     TTestParagraph = class(TTestCase)
-        procedure NewParagraphUsesNormalStyle;
+        published
+            procedure NewParagraphUsesNormalStyle;
     end;
 
 implementation

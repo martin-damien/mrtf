@@ -9,7 +9,9 @@ uses
 
 type
     TTestFragment = class(TTestCase)
-        procedure ConstructorCopiesText;
+        published
+            procedure ConstructorCopiesText;
+            procedure ConstructorCanBeInstanciatedWithEmptyText;
     end;
 
 implementation
@@ -25,6 +27,18 @@ begin
         Text := 'Goodbye World';
 
         AssertEquals('Fragment must keep it initial text.', 'Hello World', Fragment.Text);
+    finally
+        Fragment.Free;
+    end;
+end;
+
+procedure TTestFragment.ConstructorCanBeInstanciatedWithEmptyText;
+var
+    Fragment: TFragment;
+begin
+    Fragment := TFragment.Create('');
+    try
+        AssertEquals('Fragment can be instanciated with empty text.', '', Fragment.Text);
     finally
         Fragment.Free;
     end;
