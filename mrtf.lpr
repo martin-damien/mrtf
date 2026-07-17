@@ -10,7 +10,8 @@ uses
     athreads,
     {$ENDIF}
     Interfaces, // this includes the LCL widgetset
-    Forms, mainform, test_fragment, MrtfDocument, MrtfParagraph, MrtfFragment;
+    Forms, mainform, test_fragment, MrtfDocument, MrtfParagraph,
+    MrtfBlock, MrtfFragment, MrtfTextBlock, test_document;
 
 {$R *.res}
 

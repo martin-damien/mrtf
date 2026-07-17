@@ -5,4 +5,4 @@ TEST_INCLUDES="-Fu./document -Fu../src/core/document"
 TEST_OUTPUT=plain
 
 tests:
-	cd $(TEST_DIR) && instantfpc $(TEST_INCLUDES) runtests.pas --all --format=$(TEST_OUTPUT)
+	cd $(TEST_DIR) && instantfpc $(TEST_INCLUDES) -B runtests.pas --all --format=$(TEST_OUTPUT)

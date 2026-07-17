@@ -6,7 +6,9 @@ uses
     Classes, SysUtils, consoletestrunner,
     test_document,
     test_paragraph,
-    test_fragment;
+    test_fragment,
+    test_textblock
+    ;
 
 type
     TMyTestRunner = class(TTestRunner)

@@ -20,7 +20,7 @@ type
 
             procedure AddBlock(ABlock: TBlock);
 
-            function Blocks(index: integer): TBlock;
+            function Block(index: integer): TBlock;
 
             property BlocksCount: integer read GetBlocksCount;
     end;
@@ -49,7 +49,7 @@ begin
     FBlocks.Add(ABlock);
 end;
 
-function TDocument.Blocks(index: integer): TBlock;
+function TDocument.Block(index: integer): TBlock;
 begin
     { @TODO Check if index is correct }
     Result := FBlocks[index];
